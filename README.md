@@ -1,5 +1,6 @@
 
-## Introduction
+# Constructing the Window
+<img width="1736" height="1199" alt="image" src="https://github.com/user-attachments/assets/e05ef0af-dc6c-4d67-87f3-81af8fe3d242" />
 
 This project is an interactive machine learning prototype that transforms simple geometric sketches into AI-generated shop window display images.
 
@@ -57,7 +58,7 @@ frame_bar
 hanging_string
 ```
 
----
+
 
 ### `test_lora.py`
 
@@ -66,7 +67,7 @@ This script is used to test the LoRA model separately. It compares the generatio
 The test results are saved to:
 
 ```text
-lora_output/round2_300steps_results/
+lora_output/
 ```
 
 
@@ -96,7 +97,7 @@ stable-diffusion-v1-5/stable-diffusion-v1-5
 The project also requires the trained LoRA weight file to exist at:
 
 ```text
-Final Project/lora_output/round2_300steps/pytorch_lora_weights.safetensors
+Final Project/lora_output/
 ```
 
 If this LoRA file is missing, the backend will stop and show an error.
@@ -136,20 +137,8 @@ The backend will run at:
 http://127.0.0.1:8000
 ```
 
-You can open the following address in the browser to check whether the backend is running:
+You can open the following address in the browser to check whether the backend is running
 
-```text
-http://127.0.0.1:8000
-```
-
-If the backend is running correctly, the browser should show a JSON message similar to:
-
-```json
-{
-  "ok": true,
-  "message": "Backend is running."
-}
-```
 
 
 
@@ -218,7 +207,7 @@ pip install fastapi uvicorn torch diffusers pillow pydantic safetensors transfor
 ```
 
 ```text
-Final Project/lora_output/round2_300steps/pytorch_lora_weights.safetensors
+Final Project/lora_output
 ```
 
 
