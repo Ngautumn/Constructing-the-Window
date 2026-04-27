@@ -1,4 +1,5 @@
-# Window Display Generator
+
+## Introduction
 
 This project is an interactive machine learning prototype that transforms simple geometric sketches into AI-generated shop window display images.
 
@@ -249,14 +250,3 @@ Stable Diffusion is very slow on CPU. A CUDA-supported NVIDIA GPU is recommended
 
 
 
-## Project Aim
-
-This project explores how simple user-drawn geometric shapes can become a generative visual system.
-
-Instead of drawing detailed images directly, the user creates a simplified spatial and semantic structure. The machine learning model then interprets this structure and transforms it into a stylised shop window display image.
-
-This creates a workflow from human sketching, to semantic mapping, to AI image generation.
-
-```text
-Human sketching → Semantic mapping → AI image generation
-```
