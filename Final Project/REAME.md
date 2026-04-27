@@ -6,44 +6,7 @@ Users can draw basic geometric shapes on a p5.js canvas and assign each shape a 
 
 The frontend sends both the sketch image and the shape metadata to a FastAPI backend. The backend uses a Stable Diffusion img2img pipeline with a fine-tuned LoRA model to generate a dreamlike retail window display image.
 
----
 
-## Project Structure
-
-```text
-Constructing-the-Window/
-│
-├── README.md
-├── .gitattributes
-│
-└── Final Project/
-    │
-    ├── app.py
-    ├── test_lora.py
-    │
-    ├── frontend/
-    │   ├── index.html
-    │   └── sketch.js
-    │
-    ├── data/
-    │   └── final_train_set/
-    │       └── train/
-    │
-    ├── lora_output/
-    │   ├── round2_300steps/
-    │   │   └── pytorch_lora_weights.safetensors
-    │   │
-    │   └── round2_300steps_results/
-    │
-    ├── lora_training/
-    │   └── diffusers/          # Used only for local LoRA training, not included in this repository
-    │
-    ├── inputs/
-    │
-    └── outputs/
-```
-
----
 
 ## About `lora_training/diffusers/`
 
@@ -57,7 +20,7 @@ pip install diffusers
 
 As long as the required dependencies are installed correctly and the LoRA weight file exists, the project can run normally.
 
----
+
 
 ## Main Files
 
@@ -67,13 +30,9 @@ This is the backend server file. It receives the sketch and semantic shape data 
 
 The input sketches are saved in `inputs/`, and the generated results are saved in `outputs/`.
 
----
 
-### `frontend/index.html`
 
-This is the frontend page file. It displays the drawing interface, buttons, role selection menu, and generated result area.
 
----
 
 ### `frontend/sketch.js`
 
@@ -109,7 +68,7 @@ The test results are saved to:
 lora_output/round2_300steps_results/
 ```
 
----
+
 
 ## Installation
 
@@ -123,7 +82,7 @@ This project uses the official Python `diffusers` library to load Stable Diffusi
 
 Users do not need to install a separate Stable Diffusion application or download the local `lora_training/diffusers/` folder.
 
----
+
 
 ## Stable Diffusion and LoRA Requirements
 
@@ -145,7 +104,7 @@ On the first run, the base Stable Diffusion model may be downloaded automaticall
 
 A CUDA-supported NVIDIA GPU is recommended because Stable Diffusion generation is very slow on CPU.
 
----
+
 
 ## How to Run
 
@@ -159,7 +118,7 @@ On my local computer, the project folder is:
 E:\Machine learning\Constructing-the-Window\Final Project
 ```
 
----
+
 
 ## Terminal 1: Run the Backend
 
@@ -191,7 +150,7 @@ If the backend is running correctly, the browser should show a JSON message simi
 }
 ```
 
----
+
 
 ## Terminal 2: Run the Frontend
 
@@ -210,7 +169,7 @@ Then open the following address in the browser:
 http://127.0.0.1:5501
 ```
 
----
+
 
 ## How to Use
 
@@ -225,7 +184,7 @@ http://127.0.0.1:5501
 9. Click `Generate` to send the sketch to the backend.
 10. The generated image will appear on the right side of the page.
 
----
+
 
 ## Notes
 
@@ -245,7 +204,7 @@ If generation fails, check:
 - whether the Python `diffusers` package is installed
 - whether the frontend is opened from `http://127.0.0.1:5501`
 
----
+
 
 ## Common Problems
 
@@ -261,7 +220,7 @@ pip install fastapi uvicorn torch diffusers pillow pydantic safetensors transfor
 Final Project/lora_output/round2_300steps/pytorch_lora_weights.safetensors
 ```
 
----
+
 
 ### Cannot find `diffusers` or `fastapi`
 
@@ -271,7 +230,7 @@ If a `ModuleNotFoundError` appears, it means the current Python environment is m
 pip install fastapi uvicorn diffusers
 ```
 
----
+
 
 ### Frontend cannot generate image
 
@@ -282,13 +241,13 @@ http://127.0.0.1:8000
 http://127.0.0.1:5501
 ```
 
----
+
 
 ### Generation is very slow
 
 Stable Diffusion is very slow on CPU. A CUDA-supported NVIDIA GPU is recommended.
 
----
+
 
 ## Project Aim
 
