@@ -1,7 +1,8 @@
 
 # Constructing the Window
 ### By Shuran Zhang
-<img width="1736" height="1199" alt="image" src="https://github.com/user-attachments/assets/e05ef0af-dc6c-4d67-87f3-81af8fe3d242" />
+<img width="1942" height="1338" alt="image" src="https://github.com/user-attachments/assets/b8988584-891a-4aca-b1c1-905db734c33d" />
+
 
 This project is an interactive machine learning prototype that transforms simple geometric sketches into AI-generated shop window display images.
 
