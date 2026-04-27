@@ -1,4 +1,8 @@
-# Window Display Generator
+
+# Constructing the Window
+### By Shuran Zhang
+<img width="1942" height="1338" alt="image" src="https://github.com/user-attachments/assets/b8988584-891a-4aca-b1c1-905db734c33d" />
+
 
 This project is an interactive machine learning prototype that transforms simple geometric sketches into AI-generated shop window display images.
 
@@ -56,7 +60,7 @@ frame_bar
 hanging_string
 ```
 
----
+
 
 ### `test_lora.py`
 
@@ -65,7 +69,7 @@ This script is used to test the LoRA model separately. It compares the generatio
 The test results are saved to:
 
 ```text
-lora_output/round2_300steps_results/
+lora_output/
 ```
 
 
@@ -95,7 +99,7 @@ stable-diffusion-v1-5/stable-diffusion-v1-5
 The project also requires the trained LoRA weight file to exist at:
 
 ```text
-Final Project/lora_output/round2_300steps/pytorch_lora_weights.safetensors
+Final Project/lora_output/
 ```
 
 If this LoRA file is missing, the backend will stop and show an error.
@@ -135,20 +139,8 @@ The backend will run at:
 http://127.0.0.1:8000
 ```
 
-You can open the following address in the browser to check whether the backend is running:
+You can open the following address in the browser to check whether the backend is running
 
-```text
-http://127.0.0.1:8000
-```
-
-If the backend is running correctly, the browser should show a JSON message similar to:
-
-```json
-{
-  "ok": true,
-  "message": "Backend is running."
-}
-```
 
 
 
@@ -217,7 +209,7 @@ pip install fastapi uvicorn torch diffusers pillow pydantic safetensors transfor
 ```
 
 ```text
-Final Project/lora_output/round2_300steps/pytorch_lora_weights.safetensors
+Final Project/lora_output
 ```
 
 
@@ -249,14 +241,3 @@ Stable Diffusion is very slow on CPU. A CUDA-supported NVIDIA GPU is recommended
 
 
 
-## Project Aim
-
-This project explores how simple user-drawn geometric shapes can become a generative visual system.
-
-Instead of drawing detailed images directly, the user creates a simplified spatial and semantic structure. The machine learning model then interprets this structure and transforms it into a stylised shop window display image.
-
-This creates a workflow from human sketching, to semantic mapping, to AI image generation.
-
-```text
-Human sketching → Semantic mapping → AI image generation
-```
